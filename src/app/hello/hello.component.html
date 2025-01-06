@@ -1,0 +1,28 @@
+<div>{{ name }}</div>
+<br />
+
+<!-- [ngIf] -->
+<ng-template [ngIf]="directive" [ngIfElse]="template">
+  Thoa man dieu kien structure directive</ng-template
+>
+
+<ng-template #template>
+  <div [class.class_number]="true">
+    Khong thoa mam dieu kien structure directive
+  </div>
+</ng-template>
+
+<!-- *ngIf -->
+
+<div *ngIf="number > 0; else number_template" [style.fontSize]="fontSize">
+  so to hon {{ number }}
+</div>
+
+<ng-template #number_template>
+  <div>So nho hon 0</div>
+</ng-template>
+
+<br />
+<div [style.width]="'100px'">{{ value_test_10 }}</div>
+<input [(ngModel)]="value_test_10" />
+<br />

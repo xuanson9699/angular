@@ -1,0 +1,13 @@
+<div *ngIf="vm$ | async as vm">
+    <p>Current Page: {{ vm.currentPage }}</p>
+    <p>Current Size: {{ vm.currentSize }}</p>
+    <p>Total Count: {{ vm.totalCount }}</p>
+    <p>Current Offset: {{ vm.currentOffset }}</p>
+  
+    <!-- Thay đổi kích thước trang -->
+    <button (click)="onSizeChanged(20)">Change Size to 20</button>
+  
+    <!-- Thay đổi trang hiện tại -->
+    <button (click)="onPageChanged(vm.currentPage + 1)">Next Page</button>
+  </div> 
+  
